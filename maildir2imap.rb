@@ -11,10 +11,8 @@ puts imap_pass
 puts imap_dir
 require 'maildir'
 require 'net/imap'
-#require 'mail'
 require 'time'
 #Create object
- 
 puts  "maildir"
 maildir = Maildir.new(mail_dir, false); #avoid creating new maildir if not exist
 #maildir.serializer = Maildir::Serializer::Mail.new
@@ -54,4 +52,3 @@ maildir.list(:new).each_with_index do |singlemail, index|
 end	
 puts "done"
 exit
-
